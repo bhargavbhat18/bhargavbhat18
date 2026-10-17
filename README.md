@@ -244,7 +244,7 @@ In addition to core full-stack software development, I actively engineer **AI-au
 * **Smart India Hackathon (SIH) 2025:** Selected to participate in nationwide engineering hackathon solving real-world technological challenges.
 * **Hackblox AI Open Source Hackathon 2026:** Built machine learning and computer vision solutions for open-source AI problem statements ([HackBlox-Hackathon-AI](https://github.com/bhargavbhat18/HackBlox-Hackathon-AI)).
 * **Kaggle Machine Learning Competitions:** Active practitioner tackling predictive modeling, data cleaning, and feature engineering challenges.
-* **TEDxGCEM Production & Digital Operations:** Managed technical production, media workflows, and digital operations for TEDx events at Gopalan College of Engineering and Management.
+
 
 ---
 
