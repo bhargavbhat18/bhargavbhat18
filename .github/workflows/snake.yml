@@ -1,0 +1,61 @@
+# GitHub Actions Workflow: Generate Contribution Snake Animation
+# Author: Bhargav Bhat (https://github.com/bhargavbhat18)
+#
+# Prerequisites & Required Repository Settings:
+# 1. In your GitHub repository (bhargavbhat18/bhargavbhat18):
+#    Go to Settings -> Actions -> General -> Workflow permissions
+#    Select "Read and write permissions", then click "Save".
+# 2. This allows GITHUB_TOKEN to commit the generated SVGs to the 'output' branch.
+# 3. No external Personal Access Token (PAT) is required; standard GITHUB_TOKEN is sufficient.
+
+name: Generate Contribution Snake
+
+'on':
+  # Schedule: Trigger daily at midnight UTC
+  schedule:
+    - cron: "0 0 * * *"
+
+  # Manual Execution: Allows one-click triggering from the GitHub Actions UI tab
+  workflow_dispatch:
+
+  # Push Trigger: Re-generates whenever changes are pushed to main
+  push:
+    branches:
+      - main
+
+# Concurrency: Cancel in-progress runs if a newer commit is pushed
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write # Minimum permission required to push to output branch
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      # Generates animated SVG of GitHub contributions
+      - name: Generate Snake SVG
+        uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-snake.svg
+            dist/github-snake-dark.svg?palette=github-dark
+        env:
+          # Optional: GitHub token to avoid API rate limits when fetching user contributions
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # Publishes the generated SVGs to a dedicated orphan branch ('output')
+      - name: Push Snake SVG to Output Branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

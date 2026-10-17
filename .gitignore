@@ -1,0 +1,11 @@
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Environment variables & credentials
+.env
+*.local
+
+# Temporary files
+*.tmp
+*.bak
