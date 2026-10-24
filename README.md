@@ -247,7 +247,6 @@ I am actively seeking **Java Full Stack Developer / Java Backend Developer** int
 
 * 🌐 **Portfolio:** [bhargav-portfolio-v2.vercel.app](https://bhargav-portfolio-v2.vercel.app)
 * 💼 **LinkedIn:** [linkedin.com/in/bhargavbhat18](https://www.linkedin.com/in/bhargavbhat18/)
-* 🐙 **GitHub:** [github.com/bhargavbhat18](https://github.com/bhargavbhat18)
 
 <div align="center">
   <br/>
