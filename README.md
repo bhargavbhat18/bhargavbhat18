@@ -230,20 +230,7 @@ In addition to core full-stack software development, I actively engineer **AI-au
 
 ---
 
-### 📈 Contribution Activity
 
-<div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/github-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="./assets/github-snake.svg" />
-    <img src="./assets/github-snake-dark.svg" alt="Bhargav Bhat Contribution Animation" width="100%" />
-  </picture>
-  <br/><br/>
-  <img src="https://ghchart.rshah.org/38bdf8/bhargavbhat18" alt="Bhargav Bhat GitHub Contribution Calendar" width="100%" />
-  <p><sub><em>Live contribution telemetry and snake animation updated continuously via GitHub Actions.</em></sub></p>
-</div>
-
----
 
 ### 🏆 Activities & Achievements
 
